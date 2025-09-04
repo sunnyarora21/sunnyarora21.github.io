@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,8 +31,10 @@
     <img src="./images/DeepakPic.jpg" alt="Deepak Arora">
     <h1>Deepak Arora</h1>
     <p>Lead Software Engineer | iOS & Flutter Expert | 10+ Years of Experience</p>
-    <a href="Deepak_Arora_Resume.pdf" class="btn">Download Resume</a>
-    <a href="https://www.linkedin.com/in/yourprofile" class="btn secondary" target="_blank">LinkedIn Profile</a>
+    <a href="Resume/DeepakResume.pdf" 
+   class="btn" 
+   onclick="return confirmDownload()">Download Resume</a>
+    <a href="https://www.linkedin.com/in/deepak-arora-2106/" class="btn secondary" target="_blank">LinkedIn Profile</a>
   </header>
 
   <!-- Professional Summary -->
@@ -117,12 +120,24 @@
     <h2>Key Projects</h2>
     <div class="projects">
       <div class="card">
-        <h3>Enterprise Cross-Platform App (Flutter)</h3>
-        <p>Scaled to 15,000+ users, improved performance by 35%, integrated Firebase/GraphQL, maintained 99.9% crash-free rate.</p>
+        <h3>QuikBox (iOS, Swift, Xcode)</h3>
+        <p>E-commerce app enabling users to pick up or request delivery of items. Features include product search, order history, and store-based browsing. <strong>Role:</strong> Involved in design, development, bug fixing, and performance optimization.</p>
       </div>
       <div class="card">
-        <h3>Smart Fleet Management App (iOS/Flutter Hybrid)</h3>
-        <p>Enabled real-time tracking and route optimization for 1,500+ riders, reduced delivery delays by 20%, achieved 4.7★ App Store rating.</p>
+        <h3>Turnkey Booking Request (iOS, Swift, Xcode)</h3>
+        <p>Property booking app supporting online & offline requests. <a href="https://apps.apple.com/us/app/hot-delivery/id1476368301" target="_blank">App Store Link</a>. <strong>Role:</strong> Contributed to design and development.</p>
+      </div>
+      <div class="card">
+        <h3>Arthrosurface (iOS, Swift, Xcode)</h3>
+        <p>Medical information app showcasing new products and solutions in healthcare. <a href="https://itunes.apple.com/us/app/event-paparazzi-host/id1058706163?mt=8" target="_blank">App Store Link</a>. <strong>Role:</strong> Application development and UI implementation.</p>
+      </div>
+      <div class="card">
+        <h3>Tennis LinkedUp (iOS, Objective-C, Xcode)</h3>
+        <p>Sports app allowing players and coaches to connect, manage matches, and integrate with Facebook & Twitter. <a href="https://itunes.apple.com/in/app/tennis-linkedup/id954912843?mt=8" target="_blank">App Store Link</a>. <strong>Role:</strong> Application development and feature implementation.</p>
+      </div>
+      <div class="card">
+        <h3>Other Apps</h3>
+        <p>YoKart, YoYumm, YoGrowcer, Hot Delivery, Pedallion, InteractiveContact, OutBack 4WD, TechDonor, Don't Panic, instantADR, TruAirSync, AvailableTable. Roles included design, development, and performance optimization.</p>
       </div>
     </div>
   </section>
@@ -151,7 +166,7 @@
     <p>Open to full-time opportunities (Remote or Onsite). Feel free to reach out.</p>
     <p><strong>Phone:</strong> +91-9466487502</p>
     <p><strong>Email:</strong> <a href="mailto:sunnyarora21@gmail.com">sunnyarora21@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/deepak-arora-2106/" target="_blank">linkedin.com/in/DeepakArora</a></p>
     <p><strong>GitHub:</strong> <a href="https://github.com/sunnyarora21" target="_blank">github.com/sunnyarora21</a></p>
   </section>
 
@@ -159,8 +174,22 @@
   <footer>
     <p>© 2025 Deepak Arora</p>
     <a href="mailto:sunnyarora21@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.linkedin.com/in/deepak-arora-2106/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
     <a href="https://github.com/sunnyarora21" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
   </footer>
+  <script>
+  function confirmDownload() {
+    if (confirm('Do you want to download Deepak Arora\'s Resume?')) {
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = 'Resume/DeepakResume.pdf';  // Path to your resume
+      link.download = 'Deepak_Arora_Resume.pdf'; // The downloaded file name
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    return false; // Prevent default <a> navigation
+  }
+</script>
 </body>
 </html>
